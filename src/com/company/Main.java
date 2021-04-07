@@ -6,9 +6,11 @@ public class Main {
 
         //tobias - just testing stuff
         Search search = new Search();
+        Square square = new Square();
         String[] myStringArray = {"Picard", "Riker", "Geordi", "Data"};
         System.out.println(search.checkForString(myStringArray, "Picard"));
         search.printProblemDescription();
+        square.drawSquare(6, '*');
         //tobias - end of tests
 
 
