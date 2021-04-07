@@ -1,3 +1,7 @@
+package com.company;
+
+import com.company.Book;
+
 import java.util.ArrayList;
 
 public class Library {
@@ -24,11 +28,11 @@ public class Library {
         for (Book book : list) {
 
             if (book.equals(sameBook)) {
-                System.out.println("Library contains \"" + sameBook.getTitle() + "\" with the given ISBN: " + sameBook.getISBN());
+                System.out.println("Libbbrary contains \"" + sameBook.getTitle() + "\" with the given ISBN: " + sameBook.getISBN());
                 return true;
             }
         }
-            System.out.println("Library do not contain \"" + sameBook.getTitle() + "\" with the given ISBN: " + sameBook.getISBN());
+            System.out.println("com.company.Library do not contain \"" + sameBook.getTitle() + "\" with the given ISBN: " + sameBook.getISBN());
             return false;
         }
     }
