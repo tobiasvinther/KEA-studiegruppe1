@@ -17,7 +17,16 @@ public class Search {
         //if no: return -1
         //cast exception (look more into this)
 
-        return -1; //change return value later
+        int stringIndex = -1;
+
+        for (int i=0; i < array.length; i++) {
+            if(array[i].equals(stringToLookFor)) {
+                stringIndex = i;
+                break;
+            }
+        }
+
+        return stringIndex;
     }
 
 }
