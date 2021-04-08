@@ -12,27 +12,29 @@ public class Library {
         Book BuildingJavaEditionThree = new Book(12345678, "Building Java Edition Three", 2021);
         Book BuildingJavaEditionFour = new Book(123456, "Building Java Edition Four", 2022);
 
-        //Creating ArrayList.
+        //Creating ArrayList. Reminder!: We haft to out comment fx line 16 and 20 to get Library do not contain:
         ArrayList<Book> bookList = new ArrayList<>();
         bookList.add(BuildingJavaEditionOne);
         bookList.add(BuildingJavaEditionTwo);
         bookList.add(BuildingJavaEditionThree);
         bookList.add(BuildingJavaEditionFour);
-        System.out.println(bogSameISBN(BuildingJavaEditionTwo,bookList));
+        System.out.println(bogSameISBN(BuildingJavaEditionOne,bookList));
 
 
     }
 
-    //Creating Method
-    public static boolean bogSameISBN(Book sameBook, ArrayList<Book> list) {
+    //Creating Method, accesmodifier, type, name, parameter: Book object and ArrayList named list
+    public static boolean bogSameISBN(Book sameISBN, ArrayList<Book> list) {
+        //Using a For each loop: it goes through each book in the list.
         for (Book book : list) {
-
-            if (book.equals(sameBook)) {
-                System.out.println("Libbbrary contains \"" + sameBook.getTitle() + "\" with the given ISBN: " + sameBook.getISBN());
+            //If statement: two book has the same ISBN-nr. system print out "Tekst and book title and ISBN-nr.
+            if (book.getISBN() == sameISBN.getISBN()) {
+                System.out.println("Library contains: " + sameISBN.getTitle() + ": " + "ISBN-nr.: " + sameISBN.getISBN());
                 return true;
             }
-        }
-            System.out.println("com.company.Library do not contain \"" + sameBook.getTitle() + "\" with the given ISBN: " + sameBook.getISBN());
+        }   /*If we out comment line 16 and 20 then the list do not contain same ISBN-nr.
+            then system print out that the Library do not contain this book: tekst, book title, and ISBN-nr.*/
+            System.out.println("Library do not contain: " + sameISBN.getTitle() + "ISBN-nr.: " + sameISBN.getISBN());
             return false;
         }
     }
